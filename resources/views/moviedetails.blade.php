@@ -14,6 +14,7 @@
             </div>
             <div class="card-footer text-muted">
                 <h4>Voto: {{ $movie_details->vote }}</h4>
+                <a class="btn btn-warning" href="{{ route('home') }}">TORNA AI FILM</a>
             </div>
         </div>
     </div>
