@@ -1,0 +1,10 @@
+#my_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    .my_card {
+        flex-basis: calc(25% - 20px);
+    }
+}

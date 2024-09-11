@@ -1,10 +1,9 @@
 {{-- questa view estende il file main.blade.php che è dentro la cartella view/layouts --}}
 @extends('layouts.main')
 
-
 @section('content')
     <div class="container my-5">
-        <h1>HOME</h1>
+        <h1>I MIGLIORI FILM</h1>
         <div id="my_container">
 
             @foreach ($all_movies as $movie)
@@ -14,14 +13,9 @@
                         <span>Uscita del film: {{ $movie->date }}</span>
                         <h5>Voto medio: {{ $movie->vote }}</h5>
                     </div>
-                    <a class="btn btn-primary" href="{{ route('moviedetails', ['id' => $movie->id]) }}">MOSTRA PIU' INFO</a>
+                    <a class="btn btn-primary" href="">MOSTRA PIU' INFO</a>
                 </div>
             @endforeach
         </div>
     </div>
-@endsection
-
-
-@section('titlePage')
-    home
 @endsection
