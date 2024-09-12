@@ -4,9 +4,8 @@
 
 @section('content')
     <div class="container my-5">
-        <h1>HOME</h1>
+        <h1>{{ $title }}</h1>
         <div id="my_container">
-
             @foreach ($all_movies as $movie)
                 <div class="card mb-3" style="width: 18rem;">
                     <h3>Titolo: {{ $movie->title }}</h3>

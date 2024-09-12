@@ -9,16 +9,19 @@ class PageController extends Controller
 {
     public function index(){
         $all_movies = Movie::all();
-        return view('home', compact('all_movies'));
+        $title = 'Lista Film';
+        return view('home', compact('all_movies','title'));
     }
 
     public function bestMovies(){
         $all_movies = Movie::where('vote','>=', 9)->get();
-        return view('bestmovies',compact('all_movies'));
+        $title = 'I Migliori Film';
+        return view('home',compact('all_movies','title'));
     }
     public function worseMovies(){
         $all_movies = Movie::where('vote','<', 8)->get();
-        return view('worsemovies',compact('all_movies'));
+        $title = 'I peggiori Film';
+        return view('home',compact('all_movies','title'));
     }
     // Funzione dettagli per id
     public function movieDetails($id){
